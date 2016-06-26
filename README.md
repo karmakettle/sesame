@@ -1,5 +1,5 @@
 ##Sesame##
-Utilizes Intel Edison's mraa library to detect the pattern in which sensors are touched. A success is sent to a remote server if the correct pattern is entered (see main.js, hardcoded USER_PASSWORD). Code for the remote server is not included here.
+Utilizes Intel Edison's mraa library to detect the pattern in which sensors are touched. A success response is sent to a remote server if the correct pattern is entered (see main.js, hardcoded USER_PASSWORD). Code for the remote server is not included here.
 
 ###What do you need to run Sesame?###
 Intel Edison
