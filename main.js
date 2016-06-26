@@ -3,23 +3,22 @@
 // Leave the above lines for proper jshinting
 
 var mraa = require("mraa");
-console.log("mraa version: ", mraa.getVersion());
-
 var http = require("http");
 
-var LOCK_API_IP = "10.11.17.215"
-var USER_PASSWORD;
-http.get('http://' + LOCK_API_IP + ':5000/door/code/get/', function(res) {
-        console.log("Got response: " + res.statusCode);
-        res.setEncoding('utf8');
-        res.on('data', function(data) {
-            data = JSON.parse(data);
-            USER_PASSWORD = data["code"];
-        });
-        res.resume();
-    }).on('error', function(e) {
-        console.log("Got error: " + e.message);
-    });
+var LOCK_API_IP = process.argv[2];
+var USER_PASSWORD = "1234";
+
+//http.get('http://' + LOCK_API_IP + ':5000/door/code/get/', function(res) {
+//        console.log("Got response: " + res.statusCode);
+//        res.setEncoding('utf8');
+//        res.on('data', function(data) {
+//            data = JSON.parse(data);
+//            USER_PASSWORD = data["code"];
+//        });
+//        res.resume();
+//    }).on('error', function(e) {
+//        console.log("Got error: " + e.message);
+//    });
 
 var pinToInputMap = {
     pin0: 0,
@@ -75,11 +74,12 @@ function addtoSequence(input) {
 function testSequence() {
     if (inputSequence.join("") === USER_PASSWORD) {
         
-        http.get('http://' + LOCK_API_IP + ':5000/door/open/', function(res) {
-            console.log("Got response: " + res.statusCode);
-            res.resume();
-        }).on('error', function(e) {
-            console.log("Got error: " + e.message);
-        });
+//        http.get('http://' + LOCK_API_IP + ':5000/door/open/', function(res) {
+//            console.log("Got response: " + res.statusCode);
+//            res.resume();
+//        }).on('error', function(e) {
+//            console.log("Got error: " + e.message);
+//        });
+        console.log("SUCCESS!!! OPEN SESAME!!!");
     }
 }

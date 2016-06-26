@@ -15,14 +15,14 @@
         "name": "README.md"
       },
       "Sesame.xdk": {
-        "previousModTime": 1456076385000,
-        "modified": 1456076385000,
+        "previousModTime": 1456088632000,
+        "modified": 1456088632000,
         "seen": true,
         "name": "Sesame.xdk"
       },
       "Sesame.xdke": {
-        "previousModTime": 1456078237000,
-        "modified": 1456078237000,
+        "previousModTime": 1459297155000,
+        "modified": 1459297155000,
         "seen": true,
         "name": "Sesame.xdke"
       },
@@ -33,8 +33,8 @@
         "name": "icon.png"
       },
       "main.js": {
-        "previousModTime": 1456078237000,
-        "modified": 1456078237000,
+        "previousModTime": 1457572839000,
+        "modified": 1457572839000,
         "seen": true,
         "name": "main.js"
       },
@@ -51,10 +51,6 @@
         "name": "xdk/project-info.json"
       }
     },
-    "boardFileStatus": {
-      "main.js": {
-        "previousModTime": 1456078253474
-      }
-    }
+    "boardFileStatus": {}
   }
 }
